@@ -1,0 +1,10 @@
+
+jmeter -n -t  BookingApp_csv_dataset_t1.jmx -l BookingAppLoadTesting\report\BookingApp_csv_dataset_t1.jtl
+
+jmeter -g BookingAppLoadTesting\report\BookingApp_csv_dataset_t1.jtl -o BookingAppLoadTesting\report\BookingApp_csv_dataset_t1.html
+
+Checked Thread Count
+1.100.500.1000.2000.1200.1500.1800
+
+Taken Thread Count
+1.100.500.1000.2000
