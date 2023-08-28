@@ -34,14 +34,13 @@
 
 
 ### Summary
-- While executed 3 concurrent request, found  636 request got connection timeout and error rate is 0.47%.
 - Server can handle almost concurrent 424 API call with almost zero (0) error rate.
 
 
 
 # Introduction
 
-This document explains how to run a performance test with JMeter against an OpenCart E-commerce Site.
+This document explains how to run a performance test with JMeter against a Booking Site.
 
 # Install
 
@@ -108,7 +107,7 @@ Testplan > Add > Threads (Users) > Thread Group (this might vary dependent on th
    - Open those file
    - The Test Plan will be loaded  
    
-   ![c](https://user-images.githubusercontent.com/92669932/189541560-025b250b-b00e-46a1-9b55-c4ed4f7835ec.jpg)
+   ![testPlan](https://github.com/shafinrahman912/BookingAppLoadTesting/assets/83553368/a3b9f91c-f772-4de0-b74e-5c20a4732cc4)
 
                                    
 # Test execution (from the Terminal)
@@ -124,27 +123,25 @@ Testplan > Add > Threads (Users) > Thread Group (this might vary dependent on th
   - **l**: output file with results   
 
 ```bash
-  jmeter -n -t  OPENCART_T1.jmx -l OPENCART_T1.csv
+  jmeter -n -t  BookingApp_csv_dataset_t1.jmx -l BookingAppLoadTesting\report\BookingApp_csv_dataset_t1.csv
 ```   
-![csvfile](https://user-images.githubusercontent.com/92669932/197028552-faf7d3e6-d74a-46fc-b4d2-750c244f2a5e.jpg)
+![BookingApp_t1_csv](https://github.com/shafinrahman912/BookingAppLoadTesting/assets/83553368/0019e4cc-a1fa-45ed-a39c-93e6ddb4a44d)
 
 
  ### Make jtl file
 
 ```bash
-  jmeter -n -t  OPENCART_T1.jmx -l OPENCART_T1.jtl
+  jmeter -n -t  BookingApp_csv_dataset_t1.jmx -l BookingAppLoadTesting\report\BookingApp_csv_dataset_t1.jtl
 ```      
   Then continue to upgrade Threads(1 to 6) by keeping Ramp-up Same.   
-  
-  ![a](https://user-images.githubusercontent.com/92669932/189541580-9345c967-36a3-48c1-bf51-692431658b27.jpg)   
-  
-  ![d](https://user-images.githubusercontent.com/92669932/189541861-ce9b4d40-3edb-408b-affd-c3c98020fddf.jpg)
+   
+  ![BookingApp_t1_jtl](https://github.com/shafinrahman912/BookingAppLoadTesting/assets/83553368/8bd2813d-eef9-4f0e-8b89-8897d62d93fd)
 
 After completing this command  
    ### Make html file   
   
   ```bash
-  jmeter -g report\OPENCART_T1.jtl -o OPENCART_T1.html
+  jmeter -g BookingAppLoadTesting\report\BookingApp_csv_dataset_t1.jtl -o BookingAppLoadTesting\report\BookingApp_csv_dataset_t1.html
 ```
  
 
