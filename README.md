@@ -11,8 +11,8 @@
     - [List of API](https://github.com/shafinrahman912/BookingAppLoadTesting#list-of-api) 
     - [Load the JMeter Script](https://github.com/shafinrahman912/BookingAppLoadTesting#load-the-jmeter-script)     
 - [Read Test Data from CSV file in Jmeter](https://github.com/shafinrahman912/BookingAppLoadTesting#read-test-data-from-csv-file-in-jmeter)
-- [Test execution from GUI ](https://github.com/shafinrahman912/BookingAppLoadTesting#test-execution-(from-GUI) )
-- [Test execution from the Terminal ](https://github.com/shafinrahman912/BookingAppLoadTesting#Test-execution-(from-the-Terminal))
+- [Test execution from GUI ](https://github.com/shafinrahman912/BookingAppLoadTesting#test-execution-from-gui)
+- [Test execution from the Terminal ](https://github.com/shafinrahman912/BookingAppLoadTesting#test-execution-from-the-terminal)
 - [Make csv File](https://github.com/shafinrahman912/BookingAppLoadTesting#make-csv-file)    
 - [Make jtl File](https://github.com/shafinrahman912/BookingAppLoadTesting#make-jtl-file)  
 - [Make html File](https://github.com/shafinrahman912/BookingAppLoadTesting#make-html-file)  
@@ -128,7 +128,7 @@ Testplan > Add > Threads (Users) > Thread Group (this might vary dependent on th
 
 - Run the test to see if data from CSV file is read and populated in the results.    <br/>  
 
-# Test execution (from GUI)
+# Test execution from GUI
  
 - JMeter should be initialized in GUI mode.
 - Click on Run Button.</br>
@@ -147,7 +147,7 @@ Testplan > Add > Threads (Users) > Thread Group (this might vary dependent on th
     ![BookingApp_t2000_summary](https://github.com/shafinrahman912/BookingAppLoadTesting/assets/83553368/8b23ae4c-5bd2-4517-9494-2cda58172c42)
 
 
-# Test execution (from the Terminal)
+# Test execution from the Terminal
  
 - JMeter should be initialized in non-GUI mode.
 - Make a report folder in the **bin** folder.  
