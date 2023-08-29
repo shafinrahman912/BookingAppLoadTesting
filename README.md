@@ -11,14 +11,14 @@
     - [List of API](https://github.com/shafinrahman912/BookingAppLoadTesting#list-of-api) 
     - [Load the JMeter Script](https://github.com/shafinrahman912/BookingAppLoadTesting#load-the-jmeter-script)     
 - [Read Test Data from CSV file in Jmeter](https://github.com/shafinrahman912/BookingAppLoadTesting#read-test-data-from-csv-file-in-jmeter)
-- [Test execution (from GUI)](https://github.com/shafinrahman912/BookingAppLoadTesting#Test-execution-(from GUI))
-- [Test execution (from the Terminal)](https://github.com/shafinrahman912/BookingAppLoadTesting#Test-execution-(from the Terminal))
+- [Test execution from GUI ](https://github.com/shafinrahman912/BookingAppLoadTesting#test-execution-(from-GUI) )
+- [Test execution from the Terminal ](https://github.com/shafinrahman912/BookingAppLoadTesting#Test-execution-(from-the-Terminal))
 - [Make csv File](https://github.com/shafinrahman912/BookingAppLoadTesting#make-csv-file)    
 - [Make jtl File](https://github.com/shafinrahman912/BookingAppLoadTesting#make-jtl-file)  
 - [Make html File](https://github.com/shafinrahman912/BookingAppLoadTesting#make-html-file)  
 - [HTML Report](https://github.com/shafinrahman912/BookingAppLoadTesting#html-report) 
 - [Transaction Per Second](https://github.com/shafinrahman912/BookingAppLoadTesting#Transaction-Per-Second)    
-- [Read Test Data from CSV file in Jmeter](https://github.com/shafinrahman912/BookingAppLoadTesting#read-test-data-from-csv-file-in-jmeter)
+
 
 
 
