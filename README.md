@@ -10,13 +10,14 @@
 - [Collection of API](https://github.com/shafinrahman912/BookingAppLoadTesting#collection-of-api)   
     - [List of API](https://github.com/shafinrahman912/BookingAppLoadTesting#list-of-api) 
     - [Load the JMeter Script](https://github.com/shafinrahman912/BookingAppLoadTesting#load-the-jmeter-script)     
+- [Read Test Data from CSV file in Jmeter](https://github.com/shafinrahman912/BookingAppLoadTesting#read-test-data-from-csv-file-in-jmeter)
+- [Test execution (from GUI)](https://github.com/shafinrahman912/BookingAppLoadTesting#Test-execution-(from GUI))
+- [Test execution (from the Terminal)](https://github.com/shafinrahman912/BookingAppLoadTesting#Test-execution-(from the Terminal))
 - [Make csv File](https://github.com/shafinrahman912/BookingAppLoadTesting#make-csv-file)    
 - [Make jtl File](https://github.com/shafinrahman912/BookingAppLoadTesting#make-jtl-file)  
 - [Make html File](https://github.com/shafinrahman912/BookingAppLoadTesting#make-html-file)  
 - [HTML Report](https://github.com/shafinrahman912/BookingAppLoadTesting#html-report) 
 - [Transaction Per Second](https://github.com/shafinrahman912/BookingAppLoadTesting#Transaction-Per-Second)    
-- [Spike Testing](https://github.com/shafinrahman912/BookingAppLoadTesting#spike-testing)      
-- [Endurance Testing](https://github.com/shafinrahman912/BookingAppLoadTesting#endurance-testing)
 - [Read Test Data from CSV file in Jmeter](https://github.com/shafinrahman912/BookingAppLoadTesting#read-test-data-from-csv-file-in-jmeter)
 
 
@@ -109,6 +110,23 @@ Testplan > Add > Threads (Users) > Thread Group (this might vary dependent on th
    
    ![testPlan](https://github.com/shafinrahman912/BookingAppLoadTesting/assets/83553368/a3b9f91c-f772-4de0-b74e-5c20a4732cc4)
 
+# Read Test Data from CSV file in Jmeter    
+
+- Create a CSV file in the test suite folder and add test data to it.  <br/>
+![createCSV](https://github.com/shafinrahman912/BookingAppLoadTesting/assets/83553368/f9f5da35-7d07-46c7-9911-a7e80d3c68f9)
+
+- Add a Config Element CSV Data Set Config in Jmeter.   <br/>
+
+![configCSV](https://github.com/shafinrahman912/BookingAppLoadTesting/assets/83553368/82972a24-c3e8-42fb-84c2-f26ba41014fa)
+
+
+- Configure ' CSV Data Set Config ' based on the need such as providing path of CSV file and variable names and other configs.   <br/>
+
+![readCSV](https://github.com/shafinrahman912/BookingAppLoadTesting/assets/83553368/a64c69b2-280b-468a-8a3f-bf7db0bfb7c0)
+
+- Run the test to see if data from the CSV file is read and populated in the results.  <br/>
+
+- Run the test to see if data from CSV file is read and populated in the results.    <br/>  
 
 # Test execution (from GUI)
  
@@ -219,23 +237,6 @@ Transaction Per Second **Number of Threads 2000 ; Ramp-Up Period 10s**
 
 
 
-# Read Test Data from CSV file in Jmeter    
-
-- Create a CSV file in the test suite folder and add test data to it.  <br/>
-![createCSV](https://github.com/shafinrahman912/BookingAppLoadTesting/assets/83553368/f9f5da35-7d07-46c7-9911-a7e80d3c68f9)
-
-- Add a Config Element CSV Data Set Config in Jmeter.   <br/>
-
-![configCSV](https://github.com/shafinrahman912/BookingAppLoadTesting/assets/83553368/82972a24-c3e8-42fb-84c2-f26ba41014fa)
-
-
-- Configure ' CSV Data Set Config ' based on the need such as providing path of CSV file and variable names and other configs.   <br/>
-
-![readCSV](https://github.com/shafinrahman912/BookingAppLoadTesting/assets/83553368/a64c69b2-280b-468a-8a3f-bf7db0bfb7c0)
-
-- Run the test to see if data from the CSV file is read and populated in the results.  <br/>
-
-- Run the test to see if data from CSV file is read and populated in the results.    <br/>  
 
 
 
