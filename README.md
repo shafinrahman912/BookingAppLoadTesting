@@ -1,23 +1,23 @@
 # Content
 
-- [Load testing Report](https://github.com/musthafiz/Performance-testing-for-OpenCart-Website#load-testing-report)  
-- [Summary](https://github.com/musthafiz/Performance-testing-for-OpenCart-Website#summary)  
-- [Introduction](https://github.com/musthafiz/Performance-testing-for-OpenCart-Website#introduction)  
-- [Install](https://github.com/musthafiz/Performance-testing-for-OpenCart-Website#install)      
-- [Prerequisites](https://github.com/musthafiz/Performance-testing-for-OpenCart-Website#prerequisites)   
-- [Elements of a Minimal Test Plan](https://github.com/musthafiz/Performance-testing-for-OpenCart-Website#prerequisites)    
-- [Test Plan](https://github.com/musthafiz/Performance-testing-for-OpenCart-Website#test-plan)    
-- [Collection of API](https://github.com/musthafiz/Performance-testing-for-OpenCart-Website#collection-of-api)   
-    - [List of API](https://github.com/musthafiz/Performance-testing-for-OpenCart-Website#list-of-api) 
-    - [Load the JMeter Script](https://github.com/musthafiz/Performance-testing-for-OpenCart-Website#load-the-jmeter-script)     
-- [Make csv File](https://github.com/musthafiz/Performance-testing-for-OpenCart-Website#make-csv-file)    
-- [Make jtl File](https://github.com/musthafiz/Performance-testing-for-OpenCart-Website#make-jtl-file)  
-- [Make html File](https://github.com/musthafiz/Performance-testing-for-OpenCart-Website#make-html-file)  
-- [HTML Report](https://github.com/musthafiz/Performance-testing-for-OpenCart-Website#html-report) 
-- [Stress Testing](https://github.com/musthafiz/Performance-testing-for-OpenCart-Website#stress-testing)    
-- [Spike Testing](https://github.com/musthafiz/Performance-testing-for-OpenCart-Website#spike-testing)      
-- [Endurance Testing](https://github.com/musthafiz/Performance-testing-for-OpenCart-Website#endurance-testing)
-- [Read Test Data from CSV file in Jmeter](https://github.com/musthafiz/Performance-testing-for-OpenCart-Website#read-test-data-from-csv-file-in-jmeter)
+- [Load testing Report](https://github.com/shafinrahman912/BookingAppLoadTesting#load-testing-report)  
+- [Summary](https://github.com/shafinrahman912/BookingAppLoadTesting#summary)  
+- [Introduction](https://github.com/shafinrahman912/BookingAppLoadTesting#introduction)  
+- [Install](https://github.com/shafinrahman912/BookingAppLoadTesting#install)      
+- [Prerequisites](https://github.com/shafinrahman912/BookingAppLoadTesting#prerequisites)   
+- [Elements of a Minimal Test Plan](https://github.com/shafinrahman912/BookingAppLoadTesting#prerequisites)    
+- [Test Plan](https://github.com/shafinrahman912/BookingAppLoadTesting#test-plan)    
+- [Collection of API](https://github.com/shafinrahman912/BookingAppLoadTesting#collection-of-api)   
+    - [List of API](https://github.com/shafinrahman912/BookingAppLoadTesting#list-of-api) 
+    - [Load the JMeter Script](https://github.com/shafinrahman912/BookingAppLoadTesting#load-the-jmeter-script)     
+- [Make csv File](https://github.com/shafinrahman912/BookingAppLoadTesting#make-csv-file)    
+- [Make jtl File](https://github.com/shafinrahman912/BookingAppLoadTesting#make-jtl-file)  
+- [Make html File](https://github.com/shafinrahman912/BookingAppLoadTesting#make-html-file)  
+- [HTML Report](https://github.com/shafinrahman912/BookingAppLoadTesting#html-report) 
+- [Transaction Per Second](https://github.com/shafinrahman912/BookingAppLoadTesting#Transaction-Per-Second)    
+- [Spike Testing](https://github.com/shafinrahman912/BookingAppLoadTesting#spike-testing)      
+- [Endurance Testing](https://github.com/shafinrahman912/BookingAppLoadTesting#endurance-testing)
+- [Read Test Data from CSV file in Jmeter](https://github.com/shafinrahman912/BookingAppLoadTesting#read-test-data-from-csv-file-in-jmeter)
 
 
 
@@ -109,7 +109,26 @@ Testplan > Add > Threads (Users) > Thread Group (this might vary dependent on th
    
    ![testPlan](https://github.com/shafinrahman912/BookingAppLoadTesting/assets/83553368/a3b9f91c-f772-4de0-b74e-5c20a4732cc4)
 
-                                   
+
+# Test execution (from GUI)
+ 
+- JMeter should be initialized in GUI mode.
+- Click on Run Button.</br>
+![run](https://github.com/shafinrahman912/BookingAppLoadTesting/assets/83553368/a16ed468-c6d3-401f-8d5f-fe11b7fa6f83)
+- Check Different Types of Report.
+
+    Summary and Aggregate  Report for  **Number of Threads 1 ; Ramp-Up Period 10s**
+   
+    Summary  Report           |  Aggregate  Report
+    :-------------------------:|:-------------------------:
+    ![BookingApp_t1_summary](https://github.com/shafinrahman912/BookingAppLoadTesting/assets/83553368/7494e916-6501-4688-b152-4bf31285cb78)  |  ![BookingApp_t1_agg](https://github.com/shafinrahman912/BookingAppLoadTesting/assets/83553368/13846ce9-41b0-4f20-898d-c63b3ed312d6)
+
+    Aggregate  Report for  **Number of Threads 2000 ; Ramp-Up Period 10s**
+    Aggregate  Report
+    :-------------------------:|
+    ![BookingApp_t2000_summary](https://github.com/shafinrahman912/BookingAppLoadTesting/assets/83553368/8b23ae4c-5bd2-4517-9494-2cda58172c42)
+
+
 # Test execution (from the Terminal)
  
 - JMeter should be initialized in non-GUI mode.
@@ -133,12 +152,14 @@ Testplan > Add > Threads (Users) > Thread Group (this might vary dependent on th
 ```bash
   jmeter -n -t  BookingApp_csv_dataset_t1.jmx -l BookingAppLoadTesting\report\BookingApp_csv_dataset_t1.jtl
 ```      
-  Then continue to upgrade Threads(1 to 6) by keeping Ramp-up Same.   
+  Then continue to upgrade Threads( 1, 100, 500, 1000, 2000 ) by keeping Ramp-up-Period Same.   
    
   ![BookingApp_t1_jtl](https://github.com/shafinrahman912/BookingAppLoadTesting/assets/83553368/8bd2813d-eef9-4f0e-8b89-8897d62d93fd)
+  ![BookingApp_allJTLs](https://github.com/shafinrahman912/BookingAppLoadTesting/assets/83553368/4d4f6056-367e-44ca-bf3d-5da384100aec)
 
-After completing this command  
-   ### Make html file   
+  After completing this command  
+
+ ### Make html file   
   
   ```bash
   jmeter -g BookingAppLoadTesting\report\BookingApp_csv_dataset_t1.jtl -o BookingAppLoadTesting\report\BookingApp_csv_dataset_t1.html
@@ -147,130 +168,75 @@ After completing this command
 
   - **g**: jtl results file
 
-  - **o**: path to output folder  
+  - **o**: path to output folder
 
-  ![b](https://user-images.githubusercontent.com/92669932/189541594-c608e5c9-9679-4c80-9f90-855985cfb630.jpg)  
-  ![f](https://user-images.githubusercontent.com/92669932/189541801-59a45bdd-6a12-44f3-9194-ff41b2c3d954.jpg)  
-  
+  ![BookingApp_t1_csv_cmd](https://github.com/shafinrahman912/BookingAppLoadTesting/assets/83553368/62f250a8-ea72-4670-8de0-71484ac3e998)
+  ![BookingApp_reports](https://github.com/shafinrahman912/BookingAppLoadTesting/assets/83553368/3595c8c8-fa1e-4e13-b10e-a5e124d22db4)
 
 # HTML Report
 
-**Number of Threads 1 ; Ramp-Up Period 10s**
+**Number of Threads 1 ; Ramp-Up Period: 10s**
    
-Requests Summary             |  Errors
+Requests Summary             |  Statistics
 :-------------------------:|:-------------------------:
-![1](https://user-images.githubusercontent.com/92669932/189543492-df0751ca-3642-4e3f-a050-0454e38117ef.jpg)  |  ![2](https://user-images.githubusercontent.com/92669932/189543499-17c168a2-5b32-4710-9bc0-df7a2b3656c7.jpg)
+![BookingApp_t1_100pass](https://github.com/shafinrahman912/BookingAppLoadTesting/assets/83553368/f9c72ff1-fc0a-4ad2-a18b-9cc0f594d905)  |  ![BookingApp_t1_stats](https://github.com/shafinrahman912/BookingAppLoadTesting/assets/83553368/72d2eaf5-36f6-4602-93c0-9f3ca857b45f)
 
-**Number of Threads 2 ; Ramp-Up Period 10s**
+
+
+**Number of Threads 100 ; Ramp-Up Period 10s**
    
-Requests Summary             |  Errors
+Requests Summary             |  Statistics
 :-------------------------:|:-------------------------:
-![3](https://user-images.githubusercontent.com/92669932/189543781-8e545531-a134-4dfd-b6bc-36b6539668b5.jpg) |  ![4](https://user-images.githubusercontent.com/92669932/189543783-37624029-b0ea-4671-b5e7-e158453b6d7c.jpg)
+![BookingApp_t1_100pass](https://github.com/shafinrahman912/BookingAppLoadTesting/assets/83553368/f9c72ff1-fc0a-4ad2-a18b-9cc0f594d905)  |  ![BookingApp_t100_stats](https://github.com/shafinrahman912/BookingAppLoadTesting/assets/83553368/6a528423-6c94-49c1-90fb-206d5a56a517)
 
 
-**Number of Threads 3 ; Ramp-Up Period 10s**
+**Number of Threads 500 ; Ramp-Up Period 10s**
    
-Requests Summary             |  Errors
+Requests Summary             |  Statistics
 :-------------------------:|:-------------------------:
-![5](https://user-images.githubusercontent.com/92669932/189543851-f5ee4f83-275f-4c9d-b716-748380ab337e.jpg)  |  ![6](https://user-images.githubusercontent.com/92669932/189543857-e2042257-9410-4a04-a301-e89631204291.jpg)
+![BookingApp_t1_100pass](https://github.com/shafinrahman912/BookingAppLoadTesting/assets/83553368/f9c72ff1-fc0a-4ad2-a18b-9cc0f594d905)  |  ![BookingApp_t500_stats](https://github.com/shafinrahman912/BookingAppLoadTesting/assets/83553368/2db8d826-1653-4c49-83a8-68fda7a16ce9)
 
 
-**Number of Threads 4 ; Ramp-Up Period 10s**
+**Number of Threads 1000 ; Ramp-Up Period 10s**
    
-Requests Summary             |  Errors
+Requests Summary             |  Statistics
 :-------------------------:|:-------------------------:
-![7](https://user-images.githubusercontent.com/92669932/189543865-5acac49a-e858-4ce0-95ce-92500d1a1cf0.jpg)  |  ![8](https://user-images.githubusercontent.com/92669932/189543871-749aaf77-1639-4de4-9f59-5476c63ced98.jpg)
+![BookingApp_t1_100pass](https://github.com/shafinrahman912/BookingAppLoadTesting/assets/83553368/f9c72ff1-fc0a-4ad2-a18b-9cc0f594d905)  |  ![BookingApp_t1000_stats](https://github.com/shafinrahman912/BookingAppLoadTesting/assets/83553368/e9536cde-4f0a-46bb-ac5e-9ddcc5cf3926)
 
 
-**Number of Threads 5 ; Ramp-Up Period 10s**
+**Number of Threads 2000 ; Ramp-Up Period 10s**
    
-Requests Summary             |  Errors
+Requests Summary             |  Statistics
 :-------------------------:|:-------------------------:
-![9](https://user-images.githubusercontent.com/92669932/189543881-995a888b-c63b-4f38-8b42-d21140704dfc.jpg)  |  ![10](https://user-images.githubusercontent.com/92669932/189543883-8229a05a-6a96-41da-85c8-d8ae587ebcae.jpg)
+![BookingApp_t1_100pass](https://github.com/shafinrahman912/BookingAppLoadTesting/assets/83553368/f9c72ff1-fc0a-4ad2-a18b-9cc0f594d905)  |  ![BookingApp_t2000_stats](https://github.com/shafinrahman912/BookingAppLoadTesting/assets/83553368/685bed04-ecd3-4cbd-bc60-1706faf2acb6)
 
 
-**Number of Threads 6 ; Ramp-Up Period 10s**
+# Transaction Per Second
+
+Transaction Per Second **Number of Threads 2000 ; Ramp-Up Period 10s**
    
-Requests Summary             |  Errors
-:-------------------------:|:-------------------------:
- ![11](https://user-images.githubusercontent.com/92669932/189543896-bba2da13-370e-438c-84e9-88439c8e307e.jpg) |  ![12](https://user-images.githubusercontent.com/92669932/189543902-851bd50a-95a7-435e-8df2-a6c615786109.jpg)   
+![BookingApp_t2000_tps](https://github.com/shafinrahman912/BookingAppLoadTesting/assets/83553368/5bbcbed4-5796-4b4c-8807-a312126a9b80)
 
 
-# Stress Testing
-
-Stress Testing is a type of software testing that evaluates how the software responds under extreme conditions. It verifies how robust a system will be, and its response capabilities and error handling when it is subjected to conditions where its normal functioning can be compromised.
-
-**Number of Threads 7 ; Ramp-Up Period 10s**
-   
-Requests Summary             |  Errors
-:-------------------------:|:-------------------------:
-![a](https://user-images.githubusercontent.com/92669932/189820373-01f812aa-acaa-47fc-a7f2-91e813e23a4a.jpg) |  ![b](https://user-images.githubusercontent.com/92669932/189820402-fcef18b3-cd47-4b60-8ee1-87e1a7e59a01.jpg)
-
-  
-
-
-**Number of Threads 8 ; Ramp-Up Period 10s**
-   
-Requests Summary             |  Errors
-:-------------------------:|:-------------------------:
-![c](https://user-images.githubusercontent.com/92669932/189820654-d0f9744c-d05e-462f-88f7-ba8f91125f29.jpg) | ![d](https://user-images.githubusercontent.com/92669932/189820670-b90a99e7-d44a-47f5-8d66-806e571c1fb4.jpg)    
-
-
-
-**Number of Threads 9 ; Ramp-Up Period 10s**
-   
-Requests Summary             |  Errors
-:-------------------------:|:-------------------------:
-![e](https://user-images.githubusercontent.com/92669932/189820708-da2be22b-1718-4f9a-a89a-e5235d6d1e82.jpg)  |   ![f](https://user-images.githubusercontent.com/92669932/189820724-4217425e-491d-4177-918b-347e89281b6b.jpg)
-
-# Spike Testing
-
-Spike testing is a type of performance testing where the demand for an application is suddenly and drastically increased or decreased. Spike testing's objective is to ascertain how a software program will behave under highly variable traffic conditions.
-
-**Number of Threads 15 ; Ramp-Up Period 10s**
-   
-Requests Summary             |  Errors
-:-------------------------:|:-------------------------:
-![s](https://user-images.githubusercontent.com/92669932/189822076-38361a8b-db25-4e43-98f4-2a582d0244fa.jpg) | ![p](https://user-images.githubusercontent.com/92669932/189822103-fdcd8c85-6d17-4135-af20-a700b5bb05d7.jpg)
-
-# Endurance Testing
-An application may be put through endurance testing to see if it can handle the processing load that will be placed on it over an extended period of time. Memory usage is tracked throughout endurance tests to identify potential issues.   
-
-**Start Threads count 6s ; Initial Delay 0s ; Start up Time 10s ; Hold load for 600s ; Shutdown Time 0s**     
-
-Requests Summary             |  Errors
-:-------------------------:|:-------------------------:
-![e](https://user-images.githubusercontent.com/92669932/189861431-3843b069-8a12-4e38-b527-2a28700f7bf9.jpg) | ![f](https://user-images.githubusercontent.com/92669932/189861468-84b0bd3c-1531-4a30-a7b2-9d9f59964823.jpg)
-
-![t](https://user-images.githubusercontent.com/92669932/189866938-ce1e11e2-9720-4c4f-91a6-6c79e450632b.jpg)
 
 # Read Test Data from CSV file in Jmeter    
 
 - Create a CSV file in the test suite folder and add test data to it.  <br/>
-
-![csv](https://user-images.githubusercontent.com/92669932/189913089-8bab3573-ad13-4d80-b9da-ff8168b953fe.jpg)
+![createCSV](https://github.com/shafinrahman912/BookingAppLoadTesting/assets/83553368/f9f5da35-7d07-46c7-9911-a7e80d3c68f9)
 
 - Add a Config Element CSV Data Set Config in Jmeter.   <br/>
 
-![2](https://user-images.githubusercontent.com/92669932/189913286-0ef1bf60-234f-4275-8def-47d815221dab.jpg)   
+![configCSV](https://github.com/shafinrahman912/BookingAppLoadTesting/assets/83553368/82972a24-c3e8-42fb-84c2-f26ba41014fa)
+
 
 - Configure ' CSV Data Set Config ' based on the need such as providing path of CSV file and variable names and other configs.   <br/>
 
-![1](https://user-images.githubusercontent.com/92669932/189913690-80380eda-a4df-4e92-901b-5f1424dadcc2.jpg)  
+![readCSV](https://github.com/shafinrahman912/BookingAppLoadTesting/assets/83553368/a64c69b2-280b-468a-8a3f-bf7db0bfb7c0)
 
 - Run the test to see if data from the CSV file is read and populated in the results.  <br/>
 
 - Run the test to see if data from CSV file is read and populated in the results.    <br/>  
 
-
-**Number of Threads 13 ; Ramp-Up Period 5s**
-
-<p float="left">
-  <img src="https://user-images.githubusercontent.com/92669932/189938100-48702b1a-99a6-4de4-af25-66f069b78e1c.jpg" width="49%" />   
-  <img src="https://user-images.githubusercontent.com/92669932/189938110-331e82ad-1e51-465a-a2e8-aec250760351.jpg" width="49%" />   
-  <img src="https://user-images.githubusercontent.com/92669932/189938113-dee95de0-4302-41ed-9924-5ddac5836cfe.jpg" width="49%" />    
-  <img src="https://user-images.githubusercontent.com/92669932/189938115-2de6ea5e-d90c-4fd1-bcc9-7e3997c52693.jpg" width="49%" />     
-</p>
 
 
 
